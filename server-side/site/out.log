@@ -1,0 +1,204 @@
+Listening on port 3002...
+{ name: 'MongoError',
+  message: 'Authentication failed.',
+  ok: 0,
+  code: 18,
+  errmsg: 'Authentication failed.' }
+{ name: 'MongoError',
+  message: 'Authentication failed.',
+  ok: 0,
+  code: 18,
+  errmsg: 'Authentication failed.' }
+connected!
+connected!
+connected!
+connected!
+
+{NumberQuestions:true}
+-----------
+Start with header for global options:
+
+    {NumberQuestions:true}
+    -----------
+
+### Multiple Choice Question (Check all that apply)
+
+A *description* for question.  
+Questions are created with headers (level 3) `### Multiple Choice Question (Check all that apply)`.
+
+* Choice A
+* Choice B
+* Choice C
+
+### Single Choice Question
+
+Markdown is great for including questions about code snippets:
+```
+$(document).ready( function()
+{
+    ko.applyBindings(new TaskViewModel());
+	var converter = new Markdown.Converter();
+	document.write(converter.makeHtml("**I am bold**"));
+});
+```
+
+1. Choice
+2. Choice
+3. Choice
+
+### Ranking/Rating Table
+
+The first column has the description.  [Use github flavored markdown for table formatting](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-tables).
+
+|                       | Do not Want | Sometimes | Always |
+| --------------------- | ----------- | --------- | ------ | 
+| Search terms used in IDE	                      |  |  |  |
+| Code that did not work out and was deleted.     |  |  |  |
+| Time spent on particular edits	              |  |  |  |
+| Code and files viewed	                          |  |  |  |
+
+### Multichoice table
+
+You can leave the other columns blank, or `[]` if multi choice.
+
+|                 | Read  | Write  |
+| ----------------| ----- | ------ |
+| Blog posts 	  |   []  |  []    |
+| Stack Overflow  |   []  |  []    |
+| Twitter         |   []  |  []    |
+| Github          |   []  |  []    |
+
+### Text multiple line answer
+Please go into **great** detail, with `> {rows:5}`
+
+&gt; {rows:5}
+
+### Text single line answer
+
+You can enter in `> {rows:1}` or `> {}`.
+
+&gt; {}
+
+-----------------------
+
+#### Other information
+
+You can use [json5](https://github.com/aseemk/json5).  _i.e._ `{rows:5}` without quotes `{"rows":5}`.
+
+The recommended method of creating surveys is to edit it in a markdown editor, and then paste it here when you are done.
+This makes it easier to save and reuse.
+
+This is a *beta* product, so please give feedback about feature design and requests!	
+	
+
+{NumberQuestions:true}
+-----------
+Start with header for global options:
+
+    {NumberQuestions:true}
+    -----------
+
+### Multiple Choice Question (Check all that apply)
+
+A *description* for question.  
+Questions are created with headers (level 3) `### Multiple Choice Question (Check all that apply)`.
+
+* Choice A
+* Choice B
+* Choice C
+
+### Single Choice Question
+
+Markdown is great for including questions about code snippets:
+```
+$(document).ready( function()
+{
+    ko.applyBindings(new TaskViewModel());
+	var converter = new Markdown.Converter();
+	document.write(converter.makeHtml("**I am bold**"));
+});
+```
+
+1. Choice
+2. Choice
+3. Choice
+
+### Ranking/Rating Table
+
+The first column has the description.  [Use github flavored markdown for table formatting](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-tables).
+
+|                       | Do not Want | Sometimes | Always |
+| --------------------- | ----------- | --------- | ------ | 
+| Search terms used in IDE	                      |  |  |  |
+| Code that did not work out and was deleted.     |  |  |  |
+| Time spent on particular edits	              |  |  |  |
+| Code and files viewed	                          |  |  |  |
+
+### Multichoice table
+
+You can leave the other columns blank, or `[]` if multi choice.
+
+|                 | Read  | Write  |
+| ----------------| ----- | ------ |
+| Blog posts 	  |   []  |  []    |
+| Stack Overflow  |   []  |  []    |
+| Twitter         |   []  |  []    |
+| Github          |   []  |  []    |
+
+### Text multiple line answer
+Please go into **great** detail, with `> {rows:5}`
+
+&gt; {rows:5}
+
+### Text single line answer
+
+You can enter in `> {rows:1}` or `> {}`.
+
+&gt; {}
+
+-----------------------
+
+#### Other information
+
+You can use [json5](https://github.com/aseemk/json5).  _i.e._ `{rows:5}` without quotes `{"rows":5}`.
+
+The recommended method of creating surveys is to edit it in a markdown editor, and then paste it here when you are done.
+This makes it easier to save and reuse.
+
+This is a *beta* product, so please give feedback about feature design and requests!	
+	
+{NumberQuestions:true}
+[0mPOST /api/design/survey [32m200 [0m43.623 ms - 8227[0m
+[0mPOST /api/study/create [32m200 [0m3.273 ms - 35[0m
+survey
+a5abaa8cd18d9558d1bceb3e6106900bc767c02b73d99ecd7682f806ff4dc02bedc6e3547e3341da9d7965d946c3efc8
+{ name: 'sohan',
+  description: '',
+  studyKind: 'survey',
+  researcherName: 'skdd',
+  contact: 'kk',
+  awards: undefined,
+  awardOptions: 
+   [ 'Amazon Gift Card',
+     'Github Swag',
+     'BrowserStack',
+     'Windows Surface RT',
+     'iPad Mini',
+     'Other',
+     'None' ],
+  status: 'open',
+  goal: '100',
+  invitecode: 'RESEARCH',
+  markdown: '\n{NumberQuestions:true}\n-----------\nStart with header for global options:\n\n    {NumberQuestions:true}\n    -----------\n\n### Multiple Choice Question (Check all that apply)\n\nA *description* for question.  \nQuestions are created with headers (level 3) `### Multiple Choice Question (Check all that apply)`.\n\n* Choice A\n* Choice B\n* Choice C\n\n### Single Choice Question\n\nMarkdown is great for including questions about code snippets:\n```\n$(document).ready( function()\n{\n    ko.applyBindings(new TaskViewModel());\n\tvar converter = new Markdown.Converter();\n\tdocument.write(converter.makeHtml("**I am bold**"));\n});\n```\n\n1. Choice\n2. Choice\n3. Choice\n\n### Ranking/Rating Table\n\nThe first column has the description.  [Use github flavored markdown for table formatting](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-tables).\n\n|                       | Do not Want | Sometimes | Always |\n| --------------------- | ----------- | --------- | ------ | \n| Search terms used in IDE\t                      |  |  |  |\n| Code that did not work out and was deleted.     |  |  |  |\n| Time spent on particular edits\t              |  |  |  |\n| Code and files viewed\t                          |  |  |  |\n\n### Multichoice table\n\nYou can leave the other columns blank, or `[]` if multi choice.\n\n|                 | Read  | Write  |\n| ----------------| ----- | ------ |\n| Blog posts \t  |   []  |  []    |\n| Stack Overflow  |   []  |  []    |\n| Twitter         |   []  |  []    |\n| Github          |   []  |  []    |\n\n### Text multiple line answer\nPlease go into **great** detail, with `> {rows:5}`\n\n&gt; {rows:5}\n\n### Text single line answer\n\nYou can enter in `> {rows:1}` or `> {}`.\n\n&gt; {}\n\n-----------------------\n\n#### Other information\n\nYou can use [json5](https://github.com/aseemk/json5).  _i.e._ `{rows:5}` without quotes `{"rows":5}`.\n\nThe recommended method of creating surveys is to edit it in a markdown editor, and then paste it here when you are done.\nThis makes it easier to save and reuse.\n\nThis is a *beta* product, so please give feedback about feature design and requests!\t\n\t',
+  token: 'a5abaa8cd18d9558d1bceb3e6106900bc767c02b73d99ecd7682f806ff4dc02bedc6e3547e3341da9d7965d946c3efc8',
+  adminLink: './studies/admin/?token=a5abaa8cd18d9558d1bceb3e6106900bc767c02b73d99ecd7682f806ff4dc02bedc6e3547e3341da9d7965d946c3efc8',
+  setPublicLink: [Function],
+  getMessage: [Function] }
+Study created: 58f3a84e9acff443ca69636d
+[0mPOST /api/study/create [32m200 [0m23.786 ms - 140[0m
+{ [Error: bad response on command 'mail': -5.5.1 Authentication Required. Learn more at]
+  code: 2,
+  smtp: '530-5.5.1 Authentication Required. Learn more at\n530 5.5.1  https://support.google.com/mail/?p=WantAuthError p28sm13402668pfd.53 - gsmtp\r\n' }
+Retrieving study by token: a5abaa8cd18d9558d1bceb3e6106900bc767c02b73d99ecd7682f806ff4dc02bedc6e3547e3341da9d7965d946c3efc8
+[0mGET /api/study/admin/a5abaa8cd18d9558d1bceb3e6106900bc767c02b73d99ecd7682f806ff4dc02bedc6e3547e3341da9d7965d946c3efc8 [32m200 [0m4.653 ms - 2896[0m
+[0mGET /api/study/status/58f3a84e9acff443ca69636d [32m200 [0m1.564 ms - 16[0m

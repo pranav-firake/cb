@@ -1,16 +1,4 @@
 Warning: missing space before text for line 3 of jade file "undefined"
-
-module.js:340
-    throw err;
-    ^
-Error: Cannot find module 'dotenv'
-    at Function.Module._resolveFilename (module.js:338:15)
-    at Function.Module._load (module.js:280:25)
-    at Module.require (module.js:364:17)
-    at require (module.js:380:17)
-    at Object.<anonymous> (/vagrant_data/checkbox.io/server-side/site/server.js:11:1)
-    at Module._compile (module.js:456:26)
-    at Object.Module._extensions..js (module.js:474:10)
-    at Module.load (module.js:356:32)
-    at Function.Module._load (module.js:312:12)
-    at Function.Module.runMain (module.js:497:10)
+Sun, 16 Apr 2017 17:21:55 GMT express deprecated app.configure: Check app.get('env') in an if statement at server.js:14:5
+Sun, 16 Apr 2017 17:21:55 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
+Sun, 16 Apr 2017 17:21:55 GMT connect deprecated limit: Restrict request size at location of read at node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
