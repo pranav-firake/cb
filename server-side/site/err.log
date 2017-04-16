@@ -1,4 +1,38 @@
 Warning: missing space before text for line 3 of jade file "undefined"
-Sun, 16 Apr 2017 17:21:55 GMT express deprecated app.configure: Check app.get('env') in an if statement at server.js:14:5
-Sun, 16 Apr 2017 17:21:55 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
-Sun, 16 Apr 2017 17:21:55 GMT connect deprecated limit: Restrict request size at location of read at node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
+Sun, 16 Apr 2017 19:12:52 GMT express deprecated app.configure: Check app.get('env') in an if statement at server.js:14:5
+Sun, 16 Apr 2017 19:12:52 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
+Sun, 16 Apr 2017 19:12:52 GMT connect deprecated limit: Restrict request size at location of read at node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: listen EADDRINUSE
+    at errnoException (net.js:901:11)
+    at Server._listen2 (net.js:1039:14)
+    at listen (net.js:1061:10)
+    at Server.listen (net.js:1135:5)
+    at Function.app.listen (/vagrant_data/cb/server-side/site/node_modules/express/lib/application.js:590:24)
+    at Object.<anonymous> (/vagrant_data/cb/server-side/site/server.js:90:5)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
+Warning: missing space before text for line 3 of jade file "undefined"
+Sun, 16 Apr 2017 19:12:52 GMT express deprecated app.configure: Check app.get('env') in an if statement at server.js:14:5
+Sun, 16 Apr 2017 19:12:52 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
+Sun, 16 Apr 2017 19:12:52 GMT connect deprecated limit: Restrict request size at location of read at node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
+
+events.js:72
+        throw er; // Unhandled 'error' event
+              ^
+Error: listen EADDRINUSE
+    at errnoException (net.js:901:11)
+    at Server._listen2 (net.js:1039:14)
+    at listen (net.js:1061:10)
+    at Server.listen (net.js:1135:5)
+    at Function.app.listen (/vagrant_data/cb/server-side/site/node_modules/express/lib/application.js:590:24)
+    at Object.<anonymous> (/vagrant_data/cb/server-side/site/server.js:90:5)
+    at Module._compile (module.js:456:26)
+    at Object.Module._extensions..js (module.js:474:10)
+    at Module.load (module.js:356:32)
+    at Function.Module._load (module.js:312:12)
