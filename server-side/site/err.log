@@ -1,7 +1,7 @@
 Warning: missing space before text for line 3 of jade file "undefined"
-Sun, 16 Apr 2017 21:53:41 GMT express deprecated app.configure: Check app.get('env') in an if statement at server.js:14:5
-Sun, 16 Apr 2017 21:53:41 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
-Sun, 16 Apr 2017 21:53:41 GMT connect deprecated limit: Restrict request size at location of read at node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
+Sun, 16 Apr 2017 22:18:33 GMT express deprecated app.configure: Check app.get('env') in an if statement at server.js:14:5
+Sun, 16 Apr 2017 22:18:33 GMT connect deprecated multipart: use parser (multiparty, busboy, formidable) npm module instead at node_modules/express/node_modules/connect/lib/middleware/bodyParser.js:56:20
+Sun, 16 Apr 2017 22:18:33 GMT connect deprecated limit: Restrict request size at location of read at node_modules/express/node_modules/connect/lib/middleware/multipart.js:86:15
 
 events.js:72
         throw er; // Unhandled 'error' event
