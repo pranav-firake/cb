@@ -8,6 +8,7 @@ var fileService = require('./upload.js');
 var redis = require('redis')
 var client = redis.createClient(6379, '127.0.0.1', {})
 
+require('dotenv').config();
 var Server = mongo.Server,
     Db = mongo.Db,
     ObjectID = mongo.ObjectID;
@@ -28,6 +29,15 @@ MongoClient.connect('mongodb://admin:admin@localhost:27017/site?authSource=admin
 });
 
 exports.loadStudy = function(req, res) {
+ try{
+        client.get('canLoad', function(err, reply) {
+        // reply is null when the key is missing
+        if(reply == null || reply == 'false')
+        {
+          res.send('[REDIS] Operation Not Permitted')         
+        }
+        else
+        {
     var token = req.params.token;
     console.log('Retrieving study by token: ' + token);
     db.collection('studies', function(err, collection) {
@@ -35,6 +45,15 @@ exports.loadStudy = function(req, res) {
             res.send(item);
         });
     });
+   }
+
+        console.dir("Value of loadStudy: " + reply);
+      });
+    }
+    catch(e)
+    {
+      res.send('Error Encountered!')
+    }
 };
 
 exports.openStudy = function(req, res) {
@@ -238,4 +257,3 @@ exports.notifyParticipant = function(req, res) {
     );
 
 }
-
