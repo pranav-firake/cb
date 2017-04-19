@@ -29,15 +29,7 @@ MongoClient.connect('mongodb://admin:admin@localhost:27017/site?authSource=admin
 });
 
 exports.loadStudy = function(req, res) {
- try{
-        client.get('canLoad', function(err, reply) {
-        // reply is null when the key is missing
-        if(reply == null || reply == 'false')
-        {
-          res.send('[REDIS] Operation Not Permitted')         
-        }
-        else
-        {
+
     var token = req.params.token;
     console.log('Retrieving study by token: ' + token);
     db.collection('studies', function(err, collection) {
@@ -53,15 +45,7 @@ exports.loadStudy = function(req, res) {
     catch(e)
     {
       res.send('Error Encountered!')
-    }
-};
 
-exports.openStudy = function(req, res) {
-    var token = req.body.token;
-    db.collection('studies', function(err, collection) {
-        collection.findOne({'token':token}, function(err, study) {
-            collection.update( {'_id' : study._id}, 
-                     {'$set' : {'status' : 'open'}});
             res.send({status:'ok'});
         });
     });
