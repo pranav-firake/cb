@@ -5,7 +5,9 @@ var emailjs = require('emailjs');
 var fileService = require('./upload.js');
 
 var redis = require('redis')
-var client = redis.createClient(6379, '127.0.0.1', {})
+//var client = redis.createClient(6379, '127.0.0.1', {})
+var client = redis.createClient(6379, '54.191.135.238', {})
+
 
 require('dotenv').config();
 
