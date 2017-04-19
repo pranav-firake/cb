@@ -7,7 +7,7 @@ var models = require('./studyModel.js');
 require('dotenv').config();
 
 var redis = require('redis')
-//var client = redis.createClient(6379, '54.191.165.50', {})
+var client = redis.createClient(6379, '54.191.135.238', {})
 
 var Server = mongo.Server,
     Db = mongo.Db,
