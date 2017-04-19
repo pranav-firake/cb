@@ -1,7 +1,18 @@
 var firstLoad = true;
 
 var AppViewModel = {};
-
+var redis = require('redis');
+var client = redis.createClient(6379, "54.191.135.238", {});
+var feature = function(){
+	client.get("feature", function(err, value){
+	if(value)
+		document.getElementById('swag-slide').style.visibility = "hidden";
+	else{
+	document.getElementById('swag-slide').style.visibility = "visible";
+	}
+	});
+}
+feature();
 function SetupEvents()
 {
 
