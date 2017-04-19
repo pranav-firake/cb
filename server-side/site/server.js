@@ -86,7 +86,7 @@ app.post('/api/study/admin/notify/', admin.notifyParticipant);
 //app.get('/api/design/survey/vote/stat/:id', votes.getSurveyStats );
 
 app.get('/api/appStatus', function(req, res) {
- 	res.send("OK");
+ 	res.send("The OK status for app");
  });
 
 app.listen(3002);
