@@ -5,10 +5,6 @@ var emailjs = require('emailjs');
 var fileService = require('./upload.js');
 
 
-var redis = require('redis')
-//var client = redis.createClient(6379, '127.0.0.1', {})
-
-require('dotenv').config();
 var Server = mongo.Server,
     Db = mongo.Db,
     ObjectID = mongo.ObjectID;
@@ -23,13 +19,13 @@ var emailServer  = emailjs.server.connect({
 var MongoClient = mongo.MongoClient;
 var db = null;
 MongoClient.connect('mongodb://admin:admin@localhost:27017/site?authSource=admin', function(err, authdb) {
+
   // Now you can use the database in the db variable
   db = authdb;
   console.log( err || "connected!" );
 });
 
 exports.loadStudy = function(req, res) {
-
     var token = req.params.token;
     console.log('Retrieving study by token: ' + token);
     db.collection('studies', function(err, collection) {
@@ -37,15 +33,14 @@ exports.loadStudy = function(req, res) {
             res.send(item);
         });
     });
-   }
+};
 
-        console.dir("Value of loadStudy: " + reply);
-      });
-    }
-    catch(e)
-    {
-      res.send('Error Encountered!')
-
+exports.openStudy = function(req, res) {
+    var token = req.body.token;
+    db.collection('studies', function(err, collection) {
+        collection.findOne({'token':token}, function(err, study) {
+            collection.update( {'_id' : study._id}, 
+                     {'$set' : {'status' : 'open'}});
             res.send({status:'ok'});
         });
     });
@@ -241,3 +236,4 @@ exports.notifyParticipant = function(req, res) {
     );
 
 }
+
