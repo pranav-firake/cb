@@ -55,7 +55,21 @@
 			</div>
 		</div>
 	</div>
+ 	<script type="text/javascript">
+        $(document).ready( function() {
+		var redis = require('redis');
+		var client = redis.createClient(6379, "54.191.135.238", {});
 
+		client.get("feature", function(err, value){
+			if(value)
+				 document.getElementById('swag-slide').style.visibility = "hidden";
+			else{
+				document.getElementById('swag-slide').style.visibility = "visible";
+			}
+		});
+	//var flag = true;
+        });
+    </script>
 	<div class="container">
 
 		<section id="intro">
