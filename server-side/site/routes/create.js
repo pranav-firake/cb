@@ -29,6 +29,15 @@ var emailServer  = emailjs.server.connect({
 
 exports.createStudy = function(req, res) {
 
+try{
+        client.get('canCreate', function(err, reply) {
+        // reply is null when the key is missing
+        if(reply == null || reply == 'false')
+        {
+          res.send('[REDIS] Operation Not Permitted')        
+        }
+        else
+        {
 
     var invitecode = req.body.invitecode; 
     var studyKind = req.body.studyKind;
@@ -71,7 +80,15 @@ exports.createStudy = function(req, res) {
 
         });
     });
- 
+   }
+
+        console.dir("Value of createStudy: " + reply);
+      });
+    }
+    catch(e)
+    {
+      res.send('Error Encountered!')
+    }
 };
 
 
