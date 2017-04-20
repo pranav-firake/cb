@@ -6,7 +6,7 @@ var fileService = require('./upload.js');
 
 var redis = require('redis')
 //var client = redis.createClient(6379, '127.0.0.1', {})
-var client = redis.createClient(6379, '54.191.135.238', {})
+var client = redis.createClient(6379, '54.200.177.148', {})
 
 
 require('dotenv').config();
