@@ -29,7 +29,7 @@ exports.uploadFiles = function(req, onReady)
 	try{
 		client.get('canUpload', function(err, reply) {
 			if(reply == null || reply == 'false'){
-				res.send('[REDIS] Operation Not Permitted')
+				onReady.send('Feature disabled by REDIS flags: Operation failure')
 			}
 			else{
 				var files = req.files.files;
@@ -43,7 +43,7 @@ exports.uploadFiles = function(req, onReady)
 	}
 	catch(e)
 	{
-		res.send('Error Encountered!')
+		onReady.send('Error accessing REDIS')
 	}
 
 };
