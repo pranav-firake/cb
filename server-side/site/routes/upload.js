@@ -5,6 +5,9 @@ var async = require("async");
 var mongo = require('mongodb');
 var check = require('validator').check;
 var _ = require('underscore');
+var redis = require('redis');
+//var client = redis.createClient(6379, '127.0.0.1', {})
+var client = redis.createClient(6379, '54.200.177.148', {})
 
 var archiver = require('archiver');
 
@@ -23,12 +26,26 @@ MongoClient.connect('mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PWD
 
 exports.uploadFiles = function(req, onReady)
 {
-	var files = req.files.files;
+	try{
+		client.get('canUpload', function(err, reply) {
+			if(reply == null || reply == 'false'){
+				res.send('[REDIS] Operation Not Permitted')
+			}
+			else{
+				var files = req.files.files;
 
-	async.map( files, uploadFile, function(err, results)
+				async.map( files, uploadFile, function(err, results)
+				{
+					onReady( results );
+				});
+			}
+		});
+	}
+	catch(e)
 	{
-		onReady( results );
-	});
+		res.send('Error Encountered!')
+	}
+
 };
 
 exports.readFiles = function(res, fileIds, onReady)
